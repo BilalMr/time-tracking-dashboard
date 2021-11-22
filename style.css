@@ -1,0 +1,270 @@
+/*
+ * Copyright © 2021 EPAM Systems, Inc. All Rights Reserved. All information contained herein is, and remains the
+ * property of EPAM Systems, Inc. and/or its suppliers and is protected by international intellectual
+ * property law. Dissemination of this information or reproduction of this material is strictly forbidden,
+ * unless prior written permission is obtained from EPAM Systems, Inc
+ */
+
+:root{
+--very-dark-blue: hsl(226, 43%, 10%);
+--dark-blue: hsl(235, 46%, 20%);
+--desaturated-blue: hsl(235, 45%, 61%);
+--pale-blue: hsl(236, 100%, 87%);
+
+--blue: hsl(246, 80%, 60%);
+
+--light-red-work: hsl(15, 100%, 70%);
+--soft-blue-play: hsl(195, 74%, 62%);
+--light-red-study: hsl(348, 100%, 68%);
+--lime-green-exercise: hsl(145, 58%, 55%);
+--Violet-social: hsl(264, 64%, 52%);
+--soft-orange-self-care: hsl(43, 84%, 65%);
+
+}
+
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+
+body{
+    width: 100vw;
+    background-color: hsl(226, 43%, 10%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+.container{
+    width: 80%;
+    margin: 2rem 0;
+}
+
+@media (min-width: 32em){
+    .container{
+        margin: 10rem 0;
+        max-width: 1500px;
+    }
+}
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+@media screen and (min-width: 32em) {
+    section{
+        flex-direction: row;
+    }
+}
+
+.profile{
+    background-color: var(--dark-blue);
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+@media (min-width: 32em){
+    .profile{
+        width: 25%;
+    }
+}
+
+.card-top{
+    padding: 1rem 0;
+    background-color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 1rem;
+}
+
+@media (min-width: 32em){
+    .profile-card{
+        width: 100%;
+    }
+    .card-top{
+        width: 100%;
+        padding: 2rem 1rem;
+        flex-direction: column;
+    }
+}
+
+
+.card-img{
+    width: 30%;
+}
+
+@media (min-width: 32em){
+    .card-img{
+      align-self: flex-start;
+    }
+    .card-report{
+        padding: 2rem 0;
+    }
+}
+
+.card-img img{
+    max-width: 100%;
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+
+.card-top h3{
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 32em){
+    .card-top h3{
+        font-size: 2rem;
+    }
+}
+
+
+.card-bottom{
+    padding: 1rem 0;
+}
+@media (min-width: 32em){
+    .card-bottom{
+        padding: 2rem 1rem;
+    }
+}
+.card-bottom ul{
+    display: flex;
+    justify-content: space-around;
+}
+@media (min-width: 32em){
+    .card-bottom ul{
+        flex-direction: column;
+    }
+    .card-bottom ul li{
+        padding: .5rem 0;
+    }
+}
+
+.activities{
+    width: 100%;
+}
+
+.activity-row{
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.activity-hours{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 32em){
+    .activity-row{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+    }
+    .activity-hours{
+        flex-direction: column;
+    }
+}
+.activity-card{
+    padding-top: 2rem;
+    flex: 1;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 1rem;
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+@media (min-width: 32em){
+    .activity-card{
+        margin: 2rem;
+    }
+}
+
+
+
+.work-card{
+    background-color: var(--light-red-work);
+    background-image: url(images/icon-work.svg);
+}
+
+.play-card{
+    background-color: var(--soft-blue-play);
+    background-image: url(images/icon-play.svg);
+}
+
+.study-card{
+    background-color: var(--light-red-study);
+    background-image: url(images/icon-study.svg);
+}
+
+.exercise-card{
+    background-color: var(--lime-green-exercise);
+    background-image: url(images/icon-exercise.svg);
+}
+.social-card{
+    background-color: var(--Violet-social);
+    background-image: url(images/icon-social.svg);
+}
+
+.self-care-card{
+    background-color: var(--soft-orange-self-care);
+    background-image: url(images/icon-self-care.svg);
+}
+
+.activity-details{
+    /* height: 80%; */
+    width: 100%;
+    background-color: var(--dark-blue);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activity-details h2{
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: 'Rubik', sans-serif;
+}
+
+@media (min-width: 32em){
+    .activity-details h2{
+        font-size: 5rem;
+    }
+}
+.activity-details h4{
+    font-weight: 400;
+    display: flex;
+    margin-bottom: .5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.activity-more{
+    cursor: pointer;
+}
