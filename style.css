@@ -32,7 +32,7 @@ ul{
 }
 
 body{
-    width: 100vw;
+    width: 100%;
     background-color: hsl(226, 43%, 10%);
     color: #fff;
     display: flex;
@@ -45,28 +45,56 @@ body{
 }
 
 .container{
-    width: 80%;
-    margin: 2rem 0;
+    width: 70%;
+    margin: 0 auto;
 }
 
-@media (min-width: 32em){
+@media (min-width: 54em){
     .container{
-        margin: 10rem 0;
+        width: 80%;
         max-width: 1500px;
     }
 }
 
 
 section{
+    margin: 6rem auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
 
-@media screen and (min-width: 32em) {
+.card{
+    max-width: 300px;
+    margin: .5em 0;
+}
+
+@media screen and (min-width: 54em) {
+    .card{
+        margin: 0;
+        width: 100%;
+        max-width: 300px;
+    }
     section{
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+        max-width: 1200px;
+    }
+    .profile{
+        width: 100%;
+        grid-row: span 3;
+    }
+}
+
+@media screen and (min-width: 70em){
+    section{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+    }
+    .profile{
+        grid-row: span 2;
     }
 }
 
@@ -79,9 +107,9 @@ section{
     border-radius: 1rem;
 }
 
-@media (min-width: 32em){
+@media (min-width: 54em){
     .profile{
-        width: 25%;
+        /* width: 25%; */
     }
 }
 
@@ -94,7 +122,7 @@ section{
     border-radius: 1rem;
 }
 
-@media (min-width: 32em){
+@media (min-width: 54em){
     .profile-card{
         width: 100%;
     }
@@ -110,7 +138,7 @@ section{
     width: 30%;
 }
 
-@media (min-width: 32em){
+@media (min-width: 54em){
     .card-img{
       align-self: flex-start;
     }
@@ -130,7 +158,7 @@ section{
     font-size: 1.5rem;
 }
 
-@media (min-width: 32em){
+@media (min-width: 54em){
     .card-top h3{
         font-size: 2rem;
     }
@@ -140,7 +168,7 @@ section{
 .card-bottom{
     padding: 1rem 0;
 }
-@media (min-width: 32em){
+@media (min-width: 54em){
     .card-bottom{
         padding: 2rem 1rem;
     }
@@ -149,7 +177,22 @@ section{
     display: flex;
     justify-content: space-around;
 }
-@media (min-width: 32em){
+
+.card-bottom ul li{
+    cursor: pointer;
+}
+a{
+    color: hsl(236, 100%, 87%);
+    text-decoration: none;
+    transition: all .3s;
+}
+a:hover{
+    color: #fff;
+}
+li.active a{
+    color: #fff;
+}
+@media (min-width: 54em){
     .card-bottom ul{
         flex-direction: column;
     }
@@ -175,7 +218,11 @@ section{
     justify-content: space-between;
 }
 
-@media screen and (min-width: 32em){
+.activity-hours p{
+    font-size: .9rem;
+}
+
+@media screen and (min-width: 54em){
     .activity-row{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -188,7 +235,6 @@ section{
 .activity-card{
     padding-top: 2rem;
     flex: 1;
-    margin-bottom: 20px;
     position: relative;
     width: 100%;
     display: flex;
@@ -198,9 +244,9 @@ section{
     background-position: right top;
 }
 
-@media (min-width: 32em){
+@media (min-width: 54em){
     .activity-card{
-        margin: 2rem;
+        
     }
 }
 
@@ -239,11 +285,17 @@ section{
     /* height: 80%; */
     width: 100%;
     background-color: var(--dark-blue);
-    padding: 1rem 2rem;
+    padding: 1rem .5rem;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
+    transition: background-color .3s ease-out;
+}
+
+.activity-details:hover{
+    background-color: #34397b;
 }
 
 .activity-details h2{
@@ -252,9 +304,12 @@ section{
     font-family: 'Rubik', sans-serif;
 }
 
-@media (min-width: 32em){
+@media (min-width: 54em){
+    .activity-details{
+        padding: 1rem 1rem;
+    }
     .activity-details h2{
-        font-size: 5rem;
+        font-size: 4rem;
     }
 }
 .activity-details h4{
