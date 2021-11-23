@@ -6,7 +6,9 @@
  */
 
 let activities = [];
-const data = fetch('./data.json')
+const data = fetch(
+  'https://bilalmr.github.io/time-tracking-dashboard/data.json'
+)
   .then((res) => {
     return res.json();
   })
