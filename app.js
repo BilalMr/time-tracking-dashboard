@@ -6,7 +6,7 @@
  */
 
 let activities = [];
-const data = fetch('/data.json')
+const data = fetch('./data.json')
   .then((res) => {
     return res.json();
   })
